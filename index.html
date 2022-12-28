@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Estacionamento de Carros</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        :target {
+            scroll-margin-top: .8em;
+        }
+
+        @media (max-width: 991px) {
+            #menu {
+                display: none;
+            }
+        }
+
+        .text-shadow-lg {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .shadow-lg {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <nav class="bg-gray-800 text-white py-4 fixed w-full">
+        <div class="container mx-auto flex items-center justify-between">
+            <a href="#" class="text-xl font-bold">
+                <div class="text-3xl font-bold text-center text-blue-700">
+                    <span class="text-gray-50">GR</span> Estacionamento
+                </div>
+            </a>
+            <button class="block lg:hidden rounded-full focus:outline-none" id="menu-button">
+                <svg class="h-6 w-6 fill-current text-white" viewBox="0 0 24 24">
+                    <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"></path>
+                </svg>
+            </button>
+            <ul class="hidden lg:flex list-reset flex" id="menu">
+                <li class="mr-6"><a href="#top" class="text-lg hover:text-gray-400">Home</a></li>
+                <li class="mr-6"><a href="#sobre" class="text-lg hover:text-gray-400">Sobre</a></li>
+                <li class="mr-6"><a href="#servico" class="text-lg hover:text-gray-400">Serviços</a></li>
+                <li class="mr-6"><a href="#contato" class="text-lg hover:text-gray-400">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="bg-blue-500 py-32 text-center text-white bg-blue-700 bg-center bg-cover min-h-[80vh]"
+        style="background-image: url('/img/bg.jpg');">
+        <h1 class="text-4xl font-bold text-shadow-lg">Estacionamento de Carros</h1>
+        <p class="text-xl mb-8 text-shadow-lg">Oferecemos vagas seguras e acessíveis para estacionar seu carro enquanto
+            você estiver fora.</p>
+        <a href="#contato" class="bg-gray-800 py-3 px-8 rounded-full text-blue-500 font-bold shadow-lg">Reserve sua vaga
+            agora</a>
+    </div>
+
+
+
+
+    
+
+    <section class="bg-gray-300 py-12 h-[100vh] pt-24" id="servico">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4">Serviço de Estacionamento</h2>
+            <p class="mb-4">Oferecemos vagas seguras e acessíveis para estacionar seu carro enquanto você estiver fora.
+                Nossas vagas são monitoradas 24 horas por dia para garantir a segurança de seu veículo. Além disso,
+                temos opções de preço acessíveis para atender às suas necessidades, seja por uma hora ou por um mês.</p>
+            <table class="w-full text-left table-auto">
+                <thead class="bg-gray-800 text-white">
+                    <tr>
+                        <th class="py-4 px-6 font-bold uppercase">Período</th>
+                        <th class="py-4 px-6 font-bold uppercase">Preço</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-gray-100">
+                    <tr>
+                        <td class="py-4 px-6">1 hora</td>
+                        <td class="py-4 px-6">R$ 10,00</td>
+                    </tr>
+                    <tr>
+                        <td class="py-4 px-6">6 horas</td>
+                        <td class="py-4 px-6">R$ 20,00</td>
+                    </tr>
+                    <tr>
+                        <td class="py-4 px-6">12 horas</td>
+                        <td class="py-4 px-6">R$ 30,00</td>
+                    </tr>
+                    <tr>
+                        <td class="py-4 px-6">24 horas</td>
+                        <td class="py-4 px-6">R$ 40,00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="bg-gray-800 h-[100vh]  py-12 pt-24 text-white bg-center bg-cover" id="sobre">
+        <div class="container mx-auto px-4" >
+            <h2 class="text-3xl font-bold mb-4">Sobre a Empresa</h2>
+            <p class="mb-4">Somos uma empresa de estacionamento de carros com mais de 10 anos de experiência. Oferecemos
+                vagas seguras e acessíveis para estacionar seu carro enquanto você estiver fora. Nossas vagas são
+                monitoradas 24 horas por dia para garantir a segurança de seu veículo.</p>
+            <p class="mb-4">Além disso, oferecemos serviços adicionais, como lavagem e manutenção de carros. Não importa
+                se você precisa estacionar por uma hora ou por um mês, temos uma opção de preço acessível para atender
+                às suas necessidades.</p>
+            <p class="mb-4">Se você tiver alguma dúvida ou quiser saber mais sobre nossos serviços, entre em contato
+                conosco. Estamos sempre dispostos a ajudar.</p>
+        </div>
+    </section>
+
+    <section class=" py-12 h-[100vh] pt-24" id="contato">
+        <form class="bg-white  rounded px-8 pt-6 pb-8 mb-4">
+            <h3 class="text-2xl font-bold mb-4">Entre em contato</h3>
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+                            Nome
+                        </label>
+                        <input
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            id="name" type="text" placeholder="Nome">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                            Email
+                        </label>
+                        <input
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            id="email" type="email" placeholder="Email">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="message">
+                            Mensagem
+                        </label>
+                        <textarea
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            id="message" placeholder="Mensagem"></textarea>
+                    </div>
+                    <div class="mb-6">
+                        <button
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            type="submit">
+                            Enviar
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <p>Olá,</p>
+                    <p>Meu nome é <strong>Gustavo Rios Costa</strong> e gostaria de entrar em contato com a empresa.
+                        Segue
+                        abaixo as informações de contato:</p>
+                    <ul>
+                        <li><strong>Endereço:</strong> R TRINTA DE OUTUBRO, 175</li>
+                        <li><strong>CEP:</strong> 57.300-380</li>
+                        <li><strong>CNPJ:</strong> 23.228.456/0001-09</li>
+                        <li><strong>Razão Social:</strong> GUSTAVO RIOS COSTA</li>
+                        <li><strong>Telefone:</strong> 09132267428</li>
+                    </ul>
+                    <p>Desde já, agradeço pela atenção.</p>
+                    <p>Att,<br>Gustavo Rios Costa</p>
+
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <footer class="bg-gray-800 py-8 text-white">
+        <div class="container mx-auto px-4 flex items-center justify-between">
+            <div class="text-sm">
+                <a href="#" class="text-gray-400 hover:text-white mr-4"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white mr-4"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white mr-4"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white mr-4"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="text-sm">
+                Copyright &copy; 2021 Estacionamento de Carros
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://api.whatsapp.com/send?phone=5511999999999" target="_blank"
+        class="fixed bottom-0 right-0 mr-6 mb-6 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full shadow-lg">
+        <i class="fab fa-whatsapp mr-2"></i> Entre em contato pelo WhatsApp
+    </a>
+
+    <script>
+        const menuButton = document.querySelector('#menu-button');
+        const menu = document.querySelector('#menu');
+        menuButton.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+
+
+</body>
