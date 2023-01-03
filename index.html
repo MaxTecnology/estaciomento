@@ -2,7 +2,9 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estacionamento de Carros</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
@@ -59,7 +61,6 @@
         </div>
     </nav>
 
-
     <div class="bg-blue-500 py-32 text-center text-white bg-blue-700 bg-center bg-cover min-h-[80vh]"
         style="background-image: url('./img/bg.jpg');">
         <h1 class="text-4xl font-bold text-shadow-lg">Estacionamento de Carros</h1>
@@ -67,14 +68,9 @@
             você estiver fora.</p>
         <a href="#contato" class="bg-gray-800 py-3 px-8 rounded-full text-blue-500 font-bold shadow-lg">Reserve sua vaga
             agora</a>
-    </div>
+    </div>    
 
-
-
-
-    
-
-    <section class="bg-gray-300 py-12 h-[100vh] pt-24" id="servico">
+    <section class="bg-gray-300 py-12 lg:h-[100vh] pt-24" id="servico">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold mb-4">Serviço de Estacionamento</h2>
             <p class="mb-4">Oferecemos vagas seguras e acessíveis para estacionar seu carro enquanto você estiver fora.
@@ -109,7 +105,7 @@
         </div>
     </section>
 
-    <section class="bg-gray-800 h-[100vh]  py-12 pt-24 text-white bg-center bg-cover" id="sobre">
+    <section class="bg-gray-800 lg:h-[100vh]  py-12 pt-24 text-white bg-center bg-cover" id="sobre">
         <div class="container mx-auto px-4" >
             <h2 class="text-3xl font-bold mb-4">Sobre a Empresa</h2>
             <p class="mb-4">Somos uma empresa de estacionamento de carros com mais de 10 anos de experiência. Oferecemos
@@ -123,10 +119,10 @@
         </div>
     </section>
 
-    <section class=" py-12 h-[100vh] pt-24" id="contato">
+    <section class=" py-12 lg:h-[100vh] pt-24" id="contato">
         <form class="bg-white  rounded px-8 pt-6 pb-8 mb-4">
             <h3 class="text-2xl font-bold mb-4">Entre em contato</h3>
-            <div class="grid grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
                     <div class="mb-4">
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
@@ -183,12 +179,11 @@
     <footer class="bg-gray-800 py-8 text-white">
         <div class="container mx-auto px-4 flex items-center justify-between">
             <div class="text-sm">
-                <a href="#" class="text-gray-400 hover:text-white mr-4"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="text-gray-400 hover:text-white mr-4"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="text-gray-400 hover:text-white mr-4"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="text-gray-400 hover:text-white mr-4"><i class="fab fa-linkedin"></i></a>
-            </div>
-            <div class="text-sm">
+                <a href="#" class="text-gray-400 hover:text-white mr-4">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                
+            <div class="text-sm hidden lg:block">
                 Copyright &copy; 2021 Estacionamento de Carros
             </div>
         </div>
@@ -196,7 +191,9 @@
 
     <a href="https://api.whatsapp.com/send?phone=5511999999999" target="_blank"
         class="fixed bottom-0 right-0 mr-6 mb-6 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full shadow-lg">
-        <i class="fab fa-whatsapp mr-2"></i> Entre em contato pelo WhatsApp
+        <i class="fab fa-whatsapp mr-2"></i> 
+        <span class="hidden lg:block">Entre em contato pelo WhatsApp</span>
+        
     </a>
 
     <script>
