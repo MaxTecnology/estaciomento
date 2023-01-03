@@ -14,32 +14,20 @@
         html {
             scroll-behavior: smooth;
         }
-
         :target {
             scroll-margin-top: .8em;
         }
-
-        @media (max-width: 991px) {
-            #menu {
-                display: none;
-            }
-        }
-
+       
         .text-shadow-lg {
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
         }
-
         .shadow-lg {
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
         }
+        
     </style>
-
 </head>
-
 <body>
-
-
-
     <nav class="bg-gray-800 text-white py-4 fixed w-full">
         <div class="container mx-auto flex items-center justify-between">
             <a href="#" class="text-xl font-bold">
@@ -52,7 +40,7 @@
                     <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"></path>
                 </svg>
             </button>
-            <ul class="hidden lg:flex list-reset flex" id="menu">
+            <ul class="fix hidden lg:flex list-reset flex" >
                 <li class="mr-6"><a href="#top" class="text-lg hover:text-gray-400">Home</a></li>
                 <li class="mr-6"><a href="#sobre" class="text-lg hover:text-gray-400">Sobre</a></li>
                 <li class="mr-6"><a href="#servico" class="text-lg hover:text-gray-400">Serviços</a></li>
@@ -60,6 +48,13 @@
             </ul>
         </div>
     </nav>
+
+    <div id="menu" class="grid grid-cols-1 text-center bg-gray-800 text-white top-[60px] fixed w-full p-8 gap-8">
+        <a onclick="toggle()" href="#top" class="text-lg hover:text-gray-400">Home</a>
+        <a onclick="toggle()" href="#sobre" class="text-lg hover:text-gray-400">Sobre</a>
+        <a onclick="toggle()" href="#servico" class="text-lg hover:text-gray-400">Serviços</a>
+        <a onclick="toggle()" href="#contato" class="text-lg hover:text-gray-400">Contato</a>
+    </div>
 
     <div class="bg-blue-500 py-32 text-center text-white bg-blue-700 bg-center bg-cover min-h-[80vh]"
         style="background-image: url('./img/bg.jpg');">
@@ -120,7 +115,7 @@
     </section>
 
     <section class=" py-12 lg:h-[100vh] pt-24" id="contato">
-        <form class="bg-white  rounded px-8 pt-6 pb-8 mb-4">
+        <form class="bg-white  rounded px-8 pt-6 pb-8 mb-4" action="https://formsubmit.co/rioscosta@live.com" method="POST">
             <h3 class="text-2xl font-bold mb-4">Entre em contato</h3>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
@@ -130,7 +125,7 @@
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            id="name" type="text" placeholder="Nome">
+                            name="name" id="name" type="text" placeholder="Nome">
                     </div>
                     <div class="mb-4">
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
@@ -138,7 +133,7 @@
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            id="email" type="email" placeholder="Email">
+                            name="email" id="email" type="email" placeholder="Email">
                     </div>
                     <div class="mb-4">
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="message">
@@ -146,7 +141,7 @@
                         </label>
                         <textarea
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            id="message" placeholder="Mensagem"></textarea>
+                            name="message" id="message" placeholder="Mensagem"></textarea>
                     </div>
                     <div class="mb-6">
                         <button
@@ -166,7 +161,7 @@
                         <li><strong>CEP:</strong> 57.300-380</li>
                         <li><strong>CNPJ:</strong> 23.228.456/0001-09</li>
                         <li><strong>Razão Social:</strong> GUSTAVO RIOS COSTA</li>
-                        <li><strong>Telefone:</strong> 09132267428</li>
+                        <li><strong>Telefone:</strong> (82) 3521-4760</li>
                     </ul>
                     <p>Desde já, agradeço pela atenção.</p>
                     <p>Att,<br>Gustavo Rios Costa</p>
@@ -183,13 +178,13 @@
                     <i class="fab fa-facebook-f"></i>
                 </a>
                 
-            <div class="text-sm hidden lg:block">
+            <div class="text-sm hidden lg:inline">
                 Copyright &copy; 2021 Estacionamento de Carros
             </div>
         </div>
     </footer>
 
-    <a href="https://api.whatsapp.com/send?phone=5511999999999" target="_blank"
+    <a hidden href="https://api.whatsapp.com/send?phone=5511999999999" target="_blank"
         class="fixed bottom-0 right-0 mr-6 mb-6 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full shadow-lg">
         <i class="fab fa-whatsapp mr-2"></i> 
         <span class="hidden lg:block">Entre em contato pelo WhatsApp</span>
@@ -200,8 +195,11 @@
         const menuButton = document.querySelector('#menu-button');
         const menu = document.querySelector('#menu');
         menuButton.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
+            toggle()
         });
+        function toggle() {
+            menu.classList.toggle('hidden')
+        }
     </script>
 
 
